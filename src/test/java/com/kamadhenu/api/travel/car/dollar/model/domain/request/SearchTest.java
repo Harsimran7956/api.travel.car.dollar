@@ -69,7 +69,7 @@ public class SearchTest {
     }
 
     /**
-     * Tests whether driver age is not less than 18 or greater than 99
+     * Tests for empty parameter constraint
      */
 
     @Test
