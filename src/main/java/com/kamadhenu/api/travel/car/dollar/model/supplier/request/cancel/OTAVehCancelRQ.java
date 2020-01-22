@@ -31,7 +31,7 @@ public class OTAVehCancelRQ {
     private String xmlnsxsi;
 
     @XmlElement(name = "POS")
-    private CancelPos posc;
+    private CancelPOS posc;
 
     @XmlElement(name = "VehCancelRQCore")
     private VehCancelRQCore vehCancelRQCore;

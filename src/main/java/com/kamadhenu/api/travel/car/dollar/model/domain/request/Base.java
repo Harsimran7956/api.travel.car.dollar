@@ -25,19 +25,19 @@ public class Base {
 
     @NotEmpty
     @Size(min = 3, max = 3)
-    private String currencyCode;
+    private String currency;
 
     @NotEmpty
     @Size(min = 2, max = 2)
-    private String countryCode;
+    private String pos;
 
     @NotEmpty
     @Size(min = 3)
     @Pattern(regexp = "^[\\p{Alnum}]{3,32}$", message = "pickUpLocationCode should be a alphanumeric")
-    private String pickUpLocationCode;
+    private String pickUpLocation;
 
     @NotEmpty
     @Size(min = 3)
     @Pattern(regexp = "^[\\p{Alnum}]{3,32}$", message = "dropOffLocationCode should be a alphanumeric")
-    private String dropOffLocationCode;
+    private String dropOffLocation;
 }

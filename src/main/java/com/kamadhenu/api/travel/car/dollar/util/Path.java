@@ -13,14 +13,14 @@ public class Path {
     // Search route
     public static final String SEARCH = API_BASE + "/search";
 
-    //  xsellitem route
-    public static final String XSELLITEM = API_BASE + "/xsellitem";
-
     //  Book route
     public static final String BOOK = API_BASE + "/book";
 
     //  Cancel route
     public static final String CANCEL = API_BASE + "/cancel";
+
+    //  XsellItems route
+    public static final String XSELLITEMS = API_BASE + "/xsellitems";
 
     // Prometheus route
     public static final String PROMETHEUS = API_BASE + "/prometheus";

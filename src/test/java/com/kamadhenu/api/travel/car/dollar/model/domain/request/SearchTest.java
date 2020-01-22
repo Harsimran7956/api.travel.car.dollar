@@ -113,7 +113,7 @@ public class SearchTest {
      */
 
     @Test
-    public void couontryCode() {
+    public void countryCode() {
         Search searchRequest = new Search("2020-08-10 15:00:00", "2020-08-15 15:00:00",
                 "MCO", "MCO", "IT1005255GPS", 23, "USD", "GSB");
         Set<ConstraintViolation<Search>> errors = validator.validate(searchRequest);

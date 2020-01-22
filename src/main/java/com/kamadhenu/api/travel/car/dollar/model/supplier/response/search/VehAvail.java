@@ -6,13 +6,15 @@ import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import java.util.List;
 
 @Data
 @ToString
 @XmlAccessorType(XmlAccessType.FIELD)
-public class VehAvails {
+public class VehAvail {
 
-    @XmlElement(name = "VehAvail")
-    private List<VehAvail> vehAvailList;
+    @XmlElement(name = "VehAvailCore")
+    private VehAvailCore vehAvailCore;
+
+    @XmlElement(name = "VehAvailInfo")
+    private VehAvailInfo vehAvailInfo;
 }

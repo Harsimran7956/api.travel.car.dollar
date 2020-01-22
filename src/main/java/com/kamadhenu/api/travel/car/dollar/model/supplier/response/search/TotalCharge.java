@@ -13,10 +13,13 @@ import javax.xml.bind.annotation.XmlAttribute;
 public class TotalCharge {
 
     @XmlAttribute(name = "RateTotalAmount")
-    private String rateTotalAmount;
+    private double rateTotalAmount;
 
     @XmlAttribute(name = "EstimatedTotalAmount")
-    private String estimatedTotalAmount;
+    private double estimatedTotalAmount;
+
+    @XmlAttribute(name = "CurrencyCode")
+    private String currencyCode;
 
     @XmlAttribute(name = "DecimalPlaces")
     private String decimalPlaces;

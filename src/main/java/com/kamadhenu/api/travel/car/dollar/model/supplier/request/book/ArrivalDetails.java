@@ -16,6 +16,12 @@ public class ArrivalDetails {
     ArrivalDetails() {
     }
 
+    @XmlAttribute(name = "TransportationCode")
+    private String transportationCode;
+
+    @XmlAttribute(name = "Number")
+    private String flightCode;
+
     @XmlElement(name = "OperatingCompany")
     private OperatingCompany operatingCompany;
 }

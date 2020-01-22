@@ -14,17 +14,17 @@ public class Search extends Base {
 
     @NotEmpty
 //    @Size(min = 3, max = 3)
-    private String tourNumber;
+    private String tourCode;
 
     @NotNull
     @Min(value = 21, message = "Age should not be less than 21")
     @Max(value = 99, message = "Age should not be greater than 99")
     private Integer driverAge;
 
-    public Search(String pickUpDateTime, String dropOffDateTime, String pickUpLocationCode, String dropOffLocationCode, String tourNumber,
+    public Search(String pickUpDateTime, String dropOffDateTime, String pickUpLocationCode, String dropOffLocationCode, String tourCode,
                   Integer driverAge, String currencyCode, String countryCode) {
         super(pickUpDateTime, dropOffDateTime, currencyCode, countryCode, pickUpLocationCode, dropOffLocationCode);
-        this.tourNumber = tourNumber;
+        this.tourCode = tourCode;
         this.driverAge = driverAge;
     }
 }

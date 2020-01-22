@@ -34,7 +34,7 @@ public class OTAVehResRQ {
     private String xmlnsxsi;
 
     @XmlElement(name = "POS")
-    private BookPos bookPos;
+    private BookPOS bookPos;
 
     @XmlElement(name = "VehResRQCore")
     private VehResRQCore vehResRQCore;

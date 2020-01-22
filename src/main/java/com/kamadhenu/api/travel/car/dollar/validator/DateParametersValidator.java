@@ -1,6 +1,7 @@
 package com.kamadhenu.api.travel.car.dollar.validator;
 
 import com.kamadhenu.api.travel.car.dollar.model.domain.request.Book;
+import com.kamadhenu.api.travel.car.dollar.model.domain.request.Cancel;
 import com.kamadhenu.api.travel.car.dollar.model.domain.request.Search;
 import com.kamadhenu.api.travel.car.dollar.util.Config;
 import com.kamadhenu.api.travel.car.dollar.util.Helper;
@@ -38,7 +39,6 @@ public class DateParametersValidator implements ConstraintValidator<ValidDatePar
      */
     @Override
     public boolean isValid(Object obj, ConstraintValidatorContext constraintValidatorContext) {
-
         LocalDateTime pickUp = null;
         LocalDateTime dropOff = null;
         try {
@@ -52,6 +52,13 @@ public class DateParametersValidator implements ConstraintValidator<ValidDatePar
             } else if (obj.getClass().getSimpleName().equals("Book")) {
                 pickUp = Helper.getLocalDateTime(((Book) obj).getPickUpDateTime());
                 dropOff = Helper.getLocalDateTime(((Book) obj).getDropOffDateTime());
+                if (pickUp == null || dropOff == null) {
+                    addCustomConstraint(constraintValidatorContext);
+                    return isValid;
+                }
+            }else if(obj.getClass().getSimpleName().equals("Cancel")){
+                pickUp = Helper.getLocalDateTime(((Cancel) obj).getPickUpDateTime());
+                dropOff = Helper.getLocalDateTime(((Cancel) obj).getDropOffDateTime());
                 if (pickUp == null || dropOff == null) {
                     addCustomConstraint(constraintValidatorContext);
                     return isValid;

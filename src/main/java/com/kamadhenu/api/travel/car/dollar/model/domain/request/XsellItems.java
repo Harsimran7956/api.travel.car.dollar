@@ -4,7 +4,6 @@ import lombok.Data;
 import lombok.ToString;
 
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
 
 /**
  * XSellItem Request Model
@@ -18,6 +17,6 @@ public class XsellItems extends Base {
     private String tourNumber;
 
     @NotEmpty
-    @Size(min = 2, max = 2)
-    private String rateCode;
+
+    private String rateQualifier;
 }

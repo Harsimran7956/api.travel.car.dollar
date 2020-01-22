@@ -17,7 +17,7 @@ import java.util.List;
 public class VehSegmentCore {
 
     @XmlElement(name = "ConfID")
-    private List<ConfID> confID;
+    private List<ConfID> confIDList;
 
     @XmlElement(name = "Vendor")
     private Vendor vendor;

@@ -1,4 +1,4 @@
-package com.kamadhenu.api.travel.car.dollar.model.supplier.request.search;
+package com.kamadhenu.api.travel.car.dollar.model.supplier.request.xsellItem;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,7 +10,9 @@ import javax.xml.bind.annotation.*;
 @ToString
 @AllArgsConstructor
 @XmlAccessorType(XmlAccessType.FIELD)
-public class OTAVehAvailRateRQ {
+public class XSellItemOTAVehAvailRateRQ {
+
+    public XSellItemOTAVehAvailRateRQ(){}
 
     @XmlAttribute(name = "xmlns")
     private String xmlns;
@@ -34,13 +36,13 @@ public class OTAVehAvailRateRQ {
     private String transactionIdentifier;
 
     @XmlElement(name = "POS")
-    private SearchPOS searchPos;
+    private XSellItemPOS POSX;
 
-    @XmlElement(name = "VehAvailRQCore")
-    private VehAvailRQCore vehAvailRQCore;
+    @XmlElement(name = "VehAVailRQCore")
+    private XSellItemVehAvailRQCore vehAvailRQCore;
 
     @XmlElement(name = "VehAvailRQInfo")
-    private VehAvailRQInfo vehAvailRQInfo;
+    private XSellItemVehAvailRQInfo vehAvailRQInfo;
 
 
 }

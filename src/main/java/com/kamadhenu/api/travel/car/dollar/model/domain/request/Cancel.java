@@ -13,25 +13,22 @@ import javax.validation.constraints.Size;
 @Data
 @ToString
 @AllArgsConstructor
-public class Cancel {
+public class Cancel extends Base{
 
     @NotEmpty
-    @Size(min = 3, max = 3)
-    private String currencyCode;
+    private String driverFirstName;
 
     @NotEmpty
-    @Size(min = 2, max = 2)
-    private String countryCode;
+    private String driverLastName;
 
     @NotEmpty
-    private String surName;
-
-    @NotEmpty
-    private String givenName;
-
-    @NotEmpty
-    private String bookingRef;
+    private String bookingReference;
 
     @NotEmpty
     private String supplierCode;
+
+    @NotEmpty
+    @Size(min = 2, max = 255)
+    private String driverTitle;
+
 }

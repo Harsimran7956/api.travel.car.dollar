@@ -6,6 +6,7 @@ import lombok.ToString;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import java.util.List;
 
 @Data
 @ToString
@@ -13,5 +14,5 @@ import javax.xml.bind.annotation.XmlElement;
 public class PricedEquips {
 
     @XmlElement(name = "PricedEquip")
-    private PricedEquip pricedEquip;
+    private List<PricedEquip> pricedEquipList;
 }

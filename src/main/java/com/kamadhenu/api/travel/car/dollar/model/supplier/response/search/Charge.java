@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlElement;
 public class Charge {
 
     @XmlAttribute(name = "Amount")
-    private String amount;
+    private double amount;
 
     @XmlAttribute(name = "DecimalPlaces")
     private String decimalPlaces;
@@ -26,7 +26,7 @@ public class Charge {
     private String guaranteedInd;
 
     @XmlAttribute(name = "IncludedInRate")
-    private String includedInRate;
+    private Boolean includedInRate;
 
     @XmlAttribute(name = "IncludedInEstTotalInd")
     private String includedInEstTotalInd;
